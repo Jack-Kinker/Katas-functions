@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <script>
+
+        function add (num1, num2) {
+            var num3 = num1 + num2;
+            return num3;
+        }
+        console.log("2+4=", add(2,4));
+        
+
+        function multiply(num4, num5){
+            var base = num5;
+            for (i = 1; i < num4; i ++) {
+                num5 = add(base, num5);
+            }
+            return(num5);
+        }
+        console.log("6*8=", multiply(6,8));
+        
+
+        function power(num6, exp) {
+            var base = num6;
+            var i;
+            for (i = 1; i < exp; i ++) {
+                num6 = multiply(base, num6);
+            }
+            return(num6);
+        }
+        console.log("2^8=", power(2,8));
+        
+
+        function factorial(num7){
+            var i = num7;
+            var num8 = 1;
+            for (i; i > 0; i --){
+                num8 = multiply(i, num8);
+            }
+            return(num8);
+        }
+        console.log("4=", factorial(4));
+        </script>
+    </body>
+</html>
